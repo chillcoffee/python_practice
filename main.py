@@ -18,12 +18,14 @@ movies = []
 #loop get all titles
 for movie in movie_titles:
     movies.append(movie.text)
-movies.reverse()
+movies.reverse()     # or do movies[::-1] #list_splicing
+
 
 
 #write to file
 with open("movies.txt", "a", encoding='utf8') as file:
     for movie in movies:
         file.write(movie + "\n")
+
 
 
